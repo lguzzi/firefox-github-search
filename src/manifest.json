@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Github Search",
-  "version": "0.0.1",
-  "description": "Search Github from URL bar",
+  "version": "0.0.2",
+  "description": "Search Github from URL bar (w/ CMSSW)",
   "icons": {
     "64": "icons/github64.png"
   },
@@ -11,13 +11,21 @@
       "name": "Github Search",
       "search_url": "https://github.com/search?q={searchTerms}",
       "favicon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-      "keyword": "github"
+      "keyword": "/github"
+    }
+  },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "CMSSW github search",
+      "search_url": "https://github.com/search?q=repo%3Acms-sw%2Fcmssw+{searchTerms}&type=code",
+      "favicon_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      "keyword": "/cmssw"
     }
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "{a52207b2-359b-48e5-9ace-c1b3a23201bf}",
-      "strict_min_version": "55.0"
+			"id": "{324c4a01-2bc3-074d-469d-7aed0709efa0}",
+      "strict_min_version": "58.0"
     }
   }
 }
